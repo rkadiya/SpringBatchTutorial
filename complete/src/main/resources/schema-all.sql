@@ -1,7 +1,8 @@
-DROP TABLE people IF EXISTS;
+DROP TABLE IF EXISTS people;
 
-CREATE TABLE people  (
-    person_id BIGINT IDENTITY NOT NULL PRIMARY KEY,
-    first_name VARCHAR(20),
-    last_name VARCHAR(20)
+CREATE TABLE people (
+    ID int NOT NULL AUTO_INCREMENT,
+    last_Name varchar(20),
+    first_Name varchar(20),
+    PRIMARY KEY (ID)
 );

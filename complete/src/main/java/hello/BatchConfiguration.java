@@ -85,5 +85,15 @@ public class BatchConfiguration {
                 .writer(writer())
                 .build();
     }
+    
+    @Bean
+    public Step step2() {
+        return stepBuilderFactory.get("step2")
+                .<Person, Person> chunk(10)
+                .reader(reader())
+                .processor(processor())
+                .writer(writer())
+                .build();
+    }
     // end::jobstep[]
 }
